@@ -1,7 +1,10 @@
-// Primary colors
-$Dark-cyan: hsl(185, 75%, 39%);
-$Very-dark-desaturated-blue: hsl(229, 23%, 23%);
-$Dark-grayish-blue: hsl(227, 10%, 46%);
+$colors: (
+	dark-cyan: rgb(25, 162, 174),
+	very-dark-desaturated-blue: hsl(229, 23%, 23%),
+	dark-grayish-blue: hsl(227, 10%, 46%),
+	dark-gray: hsl(0, 0%, 59%),
+);
 
-// Neutral colors
-$Dark-gray: hsl(0, 0%, 59%);
+@function color($color_name) {
+	@return map-get($colors, $color_name);
+}
