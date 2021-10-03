@@ -23,7 +23,6 @@ body {
   color: #2d3248;
   text-transform: capitalize;
   line-height: 1;
-  position: relative;
   background-image: url(./images/bg-pattern-top.svg), url(./images/bg-pattern-bottom.svg);
   background-position: left;
   background-size: 150%;
@@ -31,9 +30,25 @@ body {
   background-color: #19a2ae;
 }
 
-.profile-component {
-  width: 38rem;
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 38rem;
   margin: 0 auto;
+}
+
+.profile-component {
   border-radius: 1.4rem;
   overflow: hidden;
   display: -webkit-box;
@@ -49,11 +64,6 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, 35%);
-          transform: translate(-50%, 35%);
   background: #fff;
 }
 
@@ -66,7 +76,7 @@ body {
   position: relative;
 }
 
-.image {
+.img {
   width: 10.8rem;
   height: 10.8rem;
   border-radius: 50%;
@@ -138,6 +148,7 @@ body {
           align-items: center;
   gap: 1rem;
   margin-bottom: 3rem;
+  list-style: none;
 }
 
 .stat-number {
@@ -153,10 +164,6 @@ body {
 
 @media screen and (min-width: 1024px) {
   .profile-component {
-    margin: 15rem auto;
-    position: absolute;
-    left: 35%;
-    top: 35%;
     -webkit-transform: scale(0.9);
             transform: scale(0.9);
   }

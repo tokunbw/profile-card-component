@@ -28,7 +28,7 @@ body {
 	color: color(very-dark-desaturated-blue);
 	text-transform: capitalize;
 	line-height: 1;
-	position: relative;
+	// position: relative;
 
 	background-image: url(./images/bg-pattern-top.svg),
 		url(./images/bg-pattern-bottom.svg);
@@ -37,20 +37,26 @@ body {
 	background-repeat: no-repeat;
 	background-color: color(dark-cyan);
 }
-.profile-component {
-	width: 38rem;
+
+main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+}
+
+.container {
+	max-width: 38rem;
 	margin: 0 auto;
+}
+
+.profile-component {
 	border-radius: 1.4rem;
 	overflow: hidden;
-
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	position: absolute;
-	left: 50%;
-	top: 50%;
-	transform: translate(-50%, 35%);
 	background: #fff;
 }
 
@@ -63,7 +69,7 @@ body {
 	position: relative;
 }
 
-.image {
+.img {
 	width: 10.8rem;
 	height: 10.8rem;
 	border-radius: 50%;
@@ -88,7 +94,6 @@ body {
 	border: 1px solid #ebebeb;
 	width: 50rem;
 	margin: 2.2rem 0;
-	// 32 / 48
 }
 
 .span,
@@ -117,6 +122,7 @@ body {
 	align-items: center;
 	gap: 1rem;
 	margin-bottom: 3rem;
+	list-style: none;
 }
 
 .stat-number {
@@ -132,10 +138,6 @@ body {
 
 @include laptop-query {
 	.profile-component {
-		margin: 15rem auto;
-		position: absolute;
-		left: 35%;
-		top: 35%;
 		transform: scale(0.9);
 	}
 }
